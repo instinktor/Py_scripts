@@ -3,8 +3,8 @@ import json
 import socketio
 from discord.ext import commands
 
-TOKEN = "token donation"  
-TOKEN_bot = 'token_diskord_bot'
+TOKEN = #Ваш токен DA в ''
+TOKEN_bot = #Ваш токен ДисБота в ''
 bot = commands.Bot(command_prefix='!')
 sio = socketio.Client()
 
@@ -16,7 +16,7 @@ def on_connect():
 def on_message(data):
 	y = json.loads(data)
 	text = "New donate from: " + (y['username']), (y['amount']), (y['currency'])
-	channel = your-channel-id
+	channel = #your-channel-id
 	asyncio.run_coroutine_threadsafe(send_msg(channel, text), bot.loop)
 
 async def send_msg(channel, text):
